@@ -14,3 +14,7 @@ Router::route('GET', '/', function () {
 Router::get('/names/:name', function ($name) use ($t) {
 	echo $t->render("home", ["name" => $name]);
 });
+
+Router::failure(function () {
+	echo "404 Not Found";
+});

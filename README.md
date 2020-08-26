@@ -26,6 +26,9 @@ Router::get('/names/:name', function ($name) use ($t) {
 	echo $t->render("home", ["name" => $name]);
 });
 
+Router::failure(function () {
+	echo "404 Not Found";
+});
 ```
 
 ```php
@@ -60,8 +63,8 @@ Here are the relevant functions anyway:
   on $route is made with HTTP method $method
 - `Router::get`, `post`, `put`, etc, all the HTTP methods have helper
   functions that work like `route()` but without the `$method` argument
-
-
+- `Router::failure($func)` Calls $func if no path was matched yet.
+  Call after all route handlers to handle a 404.
 - `Templates::__construct($path)` set $path as the base path for templates
 - `Templates::render($name, $args)` Render template named $name with $args
 
