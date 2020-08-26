@@ -1,0 +1,20 @@
+{
+    "name": "swisschili/ezweb",
+    "description": "A tiny PHP framework for people who hate PHP frameworks",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "swissChili",
+            "email": "swisschili@fastmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "classmap": [
+            "src/router.php",
+            "src/templates.php"
+        ]
+    }
+}
