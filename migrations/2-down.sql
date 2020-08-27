@@ -1,0 +1,5 @@
+BEGIN
+
+DROP TABLE cool_table;
+
+COMMIT

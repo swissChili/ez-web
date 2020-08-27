@@ -14,7 +14,8 @@
     "autoload": {
         "classmap": [
             "src/router.php",
-            "src/templates.php"
+            "src/templates.php",
+            "src/migrations.php"
         ]
     }
 }
